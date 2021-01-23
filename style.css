@@ -72,28 +72,6 @@ body{
     box-shadow: 0 20px 50px;
 }
 
-.btn::after{
-    content:'';
-    display: inline-block;
-    height: 100%;
-    width: 100%;
-    border-radius: 100px;
-    position: absolute;
-    top:0;
-    left:0;
-    z-index: -1;
-    transition: all .4s;
-}
-
-.btn:hover::after{
-    transform: scaleX(1.5);
-}
-
-.head_button::after{
-    background-color: rgba(209, 16, 16, 0.404);
-    opacity: 0;
-}
-
 .head_button{
     background-color: #fff;
     padding: 10px 40px;
@@ -101,6 +79,28 @@ body{
     display: inline-block;
     animation-name: todown;
     animation-duration: 5s;
+}
+
+.btn::after{
+    content: '';
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all .4s;
+}
+
+.head_button::after{
+    background-color: #fff;
+}
+
+.btn:hover::after{
+    transform: scale(1.5);
+    opacity: 0;
 }
 
 /* Animations */

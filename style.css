@@ -29,7 +29,7 @@ body{
 }
 
 .logo_img{
-    height: 90px;
+    height: 12vh;
     animation-name: toup;
     animation-duration: 3s;
 }

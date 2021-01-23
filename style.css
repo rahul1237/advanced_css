@@ -1,0 +1,85 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Dosis', sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.7;
+    color: rgb(20, 19, 19);
+    padding: 30px;
+}
+
+.hdr{
+    height: 95vh;
+    background-image: linear-gradient(to left top,#ff4646bd,#16c79bad ,#23679bad) , url(imgs/main-hero.jpg);
+    background-size: cover;
+    background-position: top;
+    clip-path: polygon(0 0, 100% 0, 100% 60vh, 0 100%);
+    position: relative;
+}
+
+.logo_dv{
+    position: absolute;
+    top: 40px;
+    left: 40px;
+}
+
+.logo_img{
+    height: 90px;
+    animation-name: toup;
+    animation-duration: 3s;
+}
+
+.prima_heading{
+    position:absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-transform: uppercase;
+    color: rgba(202, 29, 29, 0.829);
+}
+
+.prima_heading_1{
+    display: block;
+    font-size: 100px;
+    font-weight: 900;
+    letter-spacing: 20px;
+    animation-name: toright;
+    animation-duration: 3s;
+}
+
+@keyframes toright{
+    0%{
+        opacity: 0; 
+        transform: translateX(-100px);   
+    }
+
+    60%{
+        opacity: 0.6;
+    }
+
+    100%{
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+@keyframes toup{
+    0%{
+        opacity: 0; 
+        transform: translateY(150px);   
+    }
+
+    60%{
+        opacity: 0.6;
+    }
+
+    100%{
+        opacity: 1;
+        transform: translate(0);
+    }
+}

@@ -45,7 +45,7 @@ body{
 
 .prima_heading_1{
     display: block;
-    font-size: 100px;
+    font-size: 13vh;
     font-weight: 900;
     letter-spacing: 20px;
     animation-name: toright;

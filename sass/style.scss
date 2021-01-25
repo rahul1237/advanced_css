@@ -1,0 +1,167 @@
+@import "abstracts/functions";
+@import "./abstracts/mixins";
+@import "abstracts/variables";
+
+@import "base/animations";
+@import "base/base";
+@import "base/typography";
+@import "base/utilities";
+
+@import "pages/home";
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Dosis', sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.7;
+    color: rgb(20, 19, 19);
+    padding: 30px;
+}
+
+.hdr{
+    height: 95vh;
+    background-image: linear-gradient(to left top,$color-red,$color-green ,$color-blue) , url(../imgs/main-hero.jpg);
+    background-size: cover;
+    background-position: top;
+    clip-path: polygon(0 0, 100% 0, 100% 60vh, 0 100%);
+    position: relative;
+}
+
+.logo_dv{
+    position: absolute;
+    top: 40px;
+    left: 40px;
+}
+
+.logo_img{
+    height: 12vh;
+    animation-name: toup;
+    animation-duration: 3s;
+}
+
+.main_area{
+    position:absolute;
+    top: 40%;
+    left: 50%;
+    
+    transform: translate(-50%,-50%);
+    text-transform: uppercase;
+    color: rgba($color-red,1);
+    text-align: center;
+}
+
+.prima_heading_1{
+    display: block;
+    font-size: 13vh;
+    font-weight: 900;
+    letter-spacing: 20px;
+    animation-name: toright;
+    animation-duration: 5s;
+}
+
+.btn{
+    &:link,
+    &:visited{
+        text-transform: uppercase;
+        text-decoration: none;
+        position: relative;
+        transition: all .2s;
+    }
+
+
+    &:hover{
+        transform: translateY(-10px);
+        box-shadow: 0 10px 100px;
+        &::after{
+            transform: scale(1.5);
+            opacity: 0;
+        }
+    }
+
+    &:active{
+        transform: translateX(0);
+        box-shadow: 0 20px 50px;
+    }
+
+    &{
+        background-color: $color-white;
+        padding: 10px 40px;
+        border-radius: 70px;
+        display: inline-block;
+        animation-name: todown;
+        animation-duration: 5s;
+    }
+
+    &::after{
+        content: '';
+        display: inline-block;
+        height: 100%;
+        width: 100%;
+        border-radius: 100px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        transition: all .4s;
+        background-color: $color-white;
+    }
+}
+
+/* Animations */
+
+@keyframes toright{
+    0%{
+        opacity: 0; 
+        transform: translateX(-100px);   
+    }
+
+    60%{
+        opacity: 0.6;
+        transform: translateX(40px);
+    }
+
+    100%{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes toup{
+    0%{
+        opacity: 0; 
+        transform: translateY(150px);   
+    }
+
+    60%{
+        opacity: 0.6;
+    }
+
+    100%{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes todown{
+    0%{
+        opacity: 0; 
+        transform: translateY(-150px);   
+    }
+
+    60%{
+        opacity: 0.6;
+        transform: translateY(20px);
+    }
+
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

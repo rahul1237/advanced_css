@@ -1,0 +1,51 @@
+/* Animations */
+
+@keyframes toright{
+    0%{
+        opacity: 0; 
+        transform: translateX(-100px);   
+    }
+
+    60%{
+        opacity: 0.6;
+        transform: translateX(40px);
+    }
+
+    100%{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes toup{
+    0%{
+        opacity: 0; 
+        transform: translateY(150px);   
+    }
+
+    60%{
+        opacity: 0.6;
+    }
+
+    100%{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes todown{
+    0%{
+        opacity: 0; 
+        transform: translateY(-150px);   
+    }
+
+    60%{
+        opacity: 0.6;
+        transform: translateY(20px);
+    }
+
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

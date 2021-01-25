@@ -1,0 +1,19 @@
+.main_area{
+    position:absolute;
+    top: 40%;
+    left: 50%;
+    
+    transform: translate(-50%,-50%);
+    text-transform: uppercase;
+    color: rgba($color-red,1);
+    text-align: center;
+}
+
+.prima_heading_1{
+    display: block;
+    font-size: 13vh;
+    font-weight: 900;
+    letter-spacing: 20px;
+    animation-name: toright;
+    animation-duration: 5s;
+}
